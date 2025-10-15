@@ -8,4 +8,5 @@ Steps to run the code:
 
 4) In the next terminal line, enter the following command "python bi_dashboard_backend.py". 
 
+
 5) Visit the website on the locally hosted URL.
