@@ -1,0 +1,301 @@
+customer_segment,product,sales_amount,date,region,category,quantity
+Corporate,Mouse,7755,2025-06-11,West,Electronics,11
+Consumer,Headphones,8800,2024-03-18,South,Electronics,10
+Enterprise,Camera,22560,2025-04-07,East,Accessories,16
+Corporate,Mouse,79593,2024-08-19,South,Accessories,43
+Enterprise,Tablet,50611,2024-06-22,West,Office Equipment,43
+Corporate,Smartphone,14112,2024-08-11,East,Office Equipment,28
+Corporate,Keyboard,77856,2024-10-19,West,Electronics,48
+Small Business,Camera,17880,2024-09-03,Central,Accessories,10
+Small Business,Mouse,17465,2024-12-25,East,Electronics,35
+Small Business,Headphones,34164,2024-09-11,West,Office Equipment,26
+Corporate,Printer,73556,2024-11-27,West,Electronics,37
+Small Business,Keyboard,16050,2025-02-10,South,Accessories,15
+Small Business,Laptop,13508,2024-05-16,East,Electronics,22
+Corporate,Printer,52374,2025-02-03,East,Accessories,29
+Corporate,Headphones,41622,2024-05-08,South,Accessories,21
+Enterprise,Laptop,42872,2025-04-11,East,Accessories,46
+Corporate,Laptop,14675,2024-02-20,North,Office Equipment,25
+Enterprise,Laptop,4420,2024-03-05,East,Office Equipment,10
+Small Business,Monitor,15400,2024-06-03,Central,Accessories,11
+Enterprise,Laptop,24453,2024-07-01,West,Office Equipment,33
+Consumer,Camera,3990,2024-10-10,East,Electronics,3
+Small Business,Printer,66600,2025-04-09,West,Electronics,37
+Corporate,Smartwatch,49640,2024-08-13,Central,Electronics,34
+Small Business,Smartphone,2876,2024-11-03,West,Accessories,4
+Small Business,Headphones,29790,2024-01-15,East,Electronics,30
+Corporate,Smartphone,23020,2024-08-03,Central,Office Equipment,20
+Small Business,Printer,44509,2024-09-04,East,Office Equipment,47
+Enterprise,Smartphone,10812,2025-05-30,South,Electronics,34
+Enterprise,Mouse,24680,2024-12-04,South,Accessories,40
+Corporate,Smartwatch,48990,2025-01-24,East,Office Equipment,30
+Consumer,Headphones,81374,2024-04-28,Central,Office Equipment,46
+Small Business,Laptop,19292,2024-01-13,East,Electronics,14
+Corporate,Smartwatch,5734,2024-04-03,South,Electronics,47
+Consumer,Tablet,267,2024-11-16,Central,Office Equipment,1
+Enterprise,Monitor,36645,2024-11-21,North,Accessories,21
+Corporate,Mouse,1099,2024-05-02,North,Office Equipment,1
+Enterprise,Printer,8004,2024-09-14,East,Electronics,6
+Corporate,Printer,19926,2025-01-21,North,Electronics,41
+Consumer,Smartwatch,5754,2025-08-20,South,Accessories,14
+Small Business,Smartphone,30422,2024-08-15,East,Accessories,41
+Consumer,Keyboard,56768,2025-01-03,Central,Electronics,32
+Corporate,Monitor,40020,2024-01-19,West,Office Equipment,46
+Consumer,Tablet,18620,2024-03-20,West,Office Equipment,20
+Corporate,Headphones,23359,2025-07-13,Central,Office Equipment,47
+Small Business,Smartphone,20793,2024-02-27,Central,Office Equipment,29
+Enterprise,Mouse,52171,2024-01-10,Central,Office Equipment,29
+Enterprise,Laptop,60192,2024-08-18,South,Accessories,48
+Enterprise,Laptop,37065,2024-11-24,Central,Accessories,21
+Small Business,Printer,60180,2024-11-14,East,Office Equipment,34
+Small Business,Headphones,21794,2025-04-28,Central,Office Equipment,34
+Small Business,Camera,37350,2024-05-30,Central,Office Equipment,45
+Corporate,Tablet,10236,2024-03-10,South,Electronics,12
+Enterprise,Printer,31020,2025-04-16,West,Office Equipment,33
+Corporate,Laptop,951,2024-04-24,North,Office Equipment,3
+Small Business,Printer,9117,2025-05-07,West,Electronics,9
+Corporate,Tablet,5842,2024-01-24,South,Accessories,23
+Consumer,Printer,48150,2024-07-14,East,Electronics,45
+Consumer,Smartphone,8925,2024-05-07,West,Accessories,17
+Corporate,Camera,28992,2024-03-11,North,Electronics,16
+Consumer,Camera,37920,2025-06-01,West,Office Equipment,32
+Corporate,Monitor,48576,2024-11-12,East,Office Equipment,44
+Small Business,Laptop,49216,2025-07-19,North,Accessories,32
+Consumer,Camera,36336,2025-01-03,West,Office Equipment,24
+Corporate,Printer,34704,2025-03-06,South,Accessories,48
+Enterprise,Monitor,46550,2024-04-12,North,Office Equipment,25
+Corporate,Keyboard,4709,2024-04-25,East,Accessories,17
+Consumer,Smartphone,1610,2024-09-19,Central,Electronics,7
+Small Business,Tablet,52204,2025-06-20,West,Office Equipment,31
+Small Business,Smartwatch,46968,2024-02-08,West,Electronics,24
+Corporate,Camera,29040,2025-08-10,West,Electronics,15
+Consumer,Laptop,33050,2024-01-25,West,Electronics,50
+Enterprise,Headphones,33143,2024-06-23,North,Office Equipment,23
+Small Business,Camera,59466,2024-09-18,South,Electronics,34
+Corporate,Smartphone,19050,2024-04-17,East,Accessories,15
+Corporate,Mouse,9082,2025-05-01,East,Office Equipment,38
+Enterprise,Laptop,3432,2025-02-28,East,Accessories,33
+Corporate,Smartphone,1890,2025-06-14,Central,Accessories,10
+Consumer,Keyboard,28248,2025-04-09,East,Office Equipment,33
+Small Business,Smartwatch,17820,2025-02-27,East,Electronics,36
+Consumer,Smartwatch,6468,2024-03-20,West,Office Equipment,12
+Enterprise,Mouse,32775,2025-02-23,East,Electronics,19
+Small Business,Camera,53946,2025-04-17,East,Office Equipment,37
+Small Business,Camera,15334,2024-04-12,South,Office Equipment,22
+Enterprise,Keyboard,8648,2024-01-26,West,Accessories,47
+Enterprise,Mouse,12240,2024-06-15,South,Office Equipment,30
+Enterprise,Mouse,72644,2024-05-15,Central,Accessories,44
+Consumer,Mouse,45198,2024-08-18,Central,Office Equipment,27
+Enterprise,Mouse,5684,2024-03-24,Central,Accessories,49
+Consumer,Headphones,31403,2025-04-30,North,Accessories,31
+Enterprise,Mouse,40475,2024-04-08,North,Electronics,25
+Corporate,Mouse,71565,2024-01-19,West,Electronics,39
+Enterprise,Mouse,35640,2025-05-28,Central,Office Equipment,45
+Corporate,Smartphone,4170,2024-08-19,Central,Electronics,5
+Consumer,Tablet,42600,2024-11-23,East,Accessories,24
+Corporate,Tablet,9190,2025-04-19,Central,Office Equipment,5
+Small Business,Smartphone,26532,2024-11-19,North,Electronics,18
+Small Business,Printer,16146,2025-01-18,West,Office Equipment,46
+Corporate,Monitor,5180,2024-02-18,South,Electronics,7
+Enterprise,Keyboard,22904,2025-07-06,East,Electronics,28
+Corporate,Camera,16812,2025-02-21,West,Electronics,12
+Enterprise,Printer,62350,2024-10-21,West,Office Equipment,43
+Enterprise,Laptop,48459,2024-03-03,Central,Electronics,29
+Small Business,Tablet,63616,2024-06-26,East,Accessories,32
+Small Business,Camera,46592,2024-09-04,Central,Office Equipment,28
+Enterprise,Monitor,18024,2024-07-07,East,Electronics,12
+Corporate,Monitor,14231,2024-06-12,Central,Accessories,19
+Small Business,Smartphone,68616,2024-10-19,West,Electronics,36
+Corporate,Smartwatch,76497,2024-03-30,West,Office Equipment,43
+Enterprise,Mouse,31122,2024-12-30,North,Electronics,19
+Consumer,Headphones,67304,2024-10-19,East,Electronics,47
+Consumer,Laptop,9856,2024-04-24,South,Accessories,7
+Enterprise,Mouse,39534,2025-04-09,North,Office Equipment,33
+Enterprise,Camera,2290,2025-03-17,Central,Accessories,10
+Consumer,Headphones,4470,2025-07-12,North,Electronics,6
+Enterprise,Laptop,8072,2024-08-13,Central,Office Equipment,8
+Enterprise,Mouse,44160,2025-02-22,West,Accessories,32
+Enterprise,Smartphone,27550,2024-09-11,Central,Electronics,29
+Consumer,Smartwatch,15344,2024-01-05,East,Electronics,28
+Enterprise,Mouse,5934,2024-12-22,South,Accessories,43
+Consumer,Smartphone,28079,2024-10-29,Central,Electronics,43
+Corporate,Laptop,9528,2025-02-25,West,Office Equipment,24
+Enterprise,Monitor,25872,2024-04-26,North,Office Equipment,49
+Enterprise,Tablet,19845,2025-07-20,Central,Office Equipment,21
+Corporate,Smartphone,10959,2024-12-16,East,Electronics,39
+Small Business,Printer,6952,2024-02-04,North,Electronics,22
+Enterprise,Smartphone,33218,2024-03-21,West,Office Equipment,34
+Enterprise,Keyboard,27050,2024-09-07,South,Electronics,25
+Small Business,Keyboard,11440,2025-02-13,North,Electronics,8
+Small Business,Tablet,1608,2024-08-07,West,Accessories,4
+Small Business,Monitor,8190,2024-07-26,West,Electronics,18
+Small Business,Monitor,75036,2024-10-09,West,Accessories,39
+Consumer,Monitor,22104,2024-05-27,South,Office Equipment,18
+Enterprise,Monitor,23900,2025-05-25,North,Electronics,50
+Small Business,Printer,9030,2025-01-26,East,Accessories,15
+Consumer,Tablet,17319,2024-08-22,East,Office Equipment,23
+Small Business,Monitor,60481,2024-11-23,West,Office Equipment,31
+Consumer,Camera,48000,2024-08-02,South,Office Equipment,48
+Enterprise,Printer,49456,2024-09-18,Central,Office Equipment,44
+Small Business,Tablet,9312,2025-05-17,West,Office Equipment,32
+Corporate,Headphones,16445,2025-06-29,East,Electronics,11
+Small Business,Headphones,8660,2024-09-13,South,Electronics,5
+Small Business,Headphones,23520,2025-08-03,East,Accessories,24
+Consumer,Smartphone,37150,2024-06-04,North,Accessories,50
+Consumer,Monitor,30634,2024-12-02,North,Office Equipment,17
+Small Business,Keyboard,20424,2025-02-08,South,Accessories,46
+Consumer,Smartwatch,3520,2024-10-28,North,Electronics,8
+Enterprise,Headphones,45310,2025-07-19,North,Electronics,46
+Enterprise,Mouse,3058,2024-08-08,Central,Electronics,11
+Consumer,Keyboard,20768,2024-07-20,West,Electronics,16
+Small Business,Monitor,58710,2024-07-10,West,Accessories,30
+Corporate,Smartphone,6160,2024-01-27,South,Accessories,40
+Small Business,Laptop,13656,2024-05-04,East,Electronics,24
+Corporate,Smartwatch,11424,2025-05-15,West,Electronics,48
+Enterprise,Headphones,49742,2024-03-21,South,Electronics,34
+Corporate,Monitor,11994,2025-03-12,North,Electronics,6
+Corporate,Headphones,57555,2024-05-11,Central,Office Equipment,45
+Consumer,Headphones,43424,2024-05-21,West,Accessories,32
+Corporate,Mouse,75474,2024-11-27,East,Office Equipment,42
+Small Business,Printer,14958,2025-02-04,South,Accessories,9
+Enterprise,Smartphone,5106,2024-03-15,Central,Electronics,46
+Enterprise,Smartwatch,26505,2025-04-06,West,Electronics,15
+Corporate,Printer,34308,2024-07-01,West,Accessories,18
+Corporate,Tablet,38813,2024-10-05,South,Office Equipment,37
+Enterprise,Keyboard,5022,2024-10-28,North,Electronics,9
+Consumer,Keyboard,3146,2025-04-20,East,Office Equipment,11
+Enterprise,Monitor,9056,2025-07-28,West,Office Equipment,16
+Enterprise,Smartwatch,43173,2025-07-30,West,Office Equipment,41
+Enterprise,Tablet,39231,2025-04-08,Central,Office Equipment,27
+Corporate,Mouse,4110,2024-05-14,Central,Office Equipment,5
+Enterprise,Tablet,84882,2024-10-22,Central,Electronics,43
+Enterprise,Smartphone,31093,2024-04-30,Central,Accessories,31
+Consumer,Printer,12496,2024-08-27,South,Accessories,11
+Consumer,Tablet,62100,2025-02-07,West,Electronics,45
+Corporate,Camera,23556,2024-03-05,East,Office Equipment,39
+Corporate,Smartwatch,26595,2025-01-12,East,Electronics,27
+Corporate,Smartwatch,48598,2024-05-17,East,Office Equipment,47
+Enterprise,Camera,38309,2025-04-06,North,Electronics,29
+Consumer,Smartphone,17622,2025-05-29,West,Accessories,9
+Enterprise,Mouse,20580,2024-03-01,East,Electronics,14
+Consumer,Smartphone,12470,2024-05-15,West,Accessories,43
+Enterprise,Tablet,4995,2025-01-22,South,Office Equipment,9
+Enterprise,Smartwatch,89930,2025-01-13,West,Accessories,46
+Enterprise,Keyboard,49470,2024-02-03,Central,Electronics,34
+Consumer,Smartwatch,2092,2025-01-01,Central,Electronics,2
+Small Business,Laptop,33560,2024-12-25,Central,Electronics,20
+Enterprise,Laptop,6675,2025-02-06,Central,Electronics,15
+Enterprise,Laptop,95808,2025-06-22,North,Office Equipment,48
+Consumer,Mouse,6804,2025-01-23,West,Office Equipment,4
+Enterprise,Smartwatch,30726,2025-01-08,West,Office Equipment,18
+Corporate,Camera,2632,2024-04-03,North,Office Equipment,4
+Small Business,Smartphone,7275,2024-09-09,South,Electronics,5
+Corporate,Smartphone,89229,2025-04-10,East,Office Equipment,49
+Corporate,Monitor,1760,2024-08-23,East,Electronics,5
+Small Business,Headphones,16450,2024-10-05,North,Office Equipment,25
+Consumer,Smartphone,2480,2025-01-28,South,Office Equipment,16
+Corporate,Mouse,19970,2024-04-18,East,Electronics,10
+Enterprise,Mouse,21285,2024-08-04,East,Accessories,15
+Consumer,Tablet,56280,2024-06-16,West,Electronics,40
+Small Business,Headphones,4033,2025-02-23,North,Electronics,37
+Corporate,Tablet,22992,2024-05-29,East,Electronics,16
+Corporate,Smartwatch,23207,2025-07-25,South,Electronics,23
+Enterprise,Headphones,46112,2025-01-08,Central,Office Equipment,32
+Consumer,Mouse,9632,2025-02-12,East,Electronics,7
+Enterprise,Printer,2807,2025-03-10,South,Electronics,7
+Corporate,Smartphone,20040,2024-10-28,South,Electronics,15
+Small Business,Camera,4298,2025-04-09,South,Office Equipment,14
+Consumer,Printer,6150,2025-03-28,South,Electronics,6
+Consumer,Smartwatch,90258,2024-08-19,West,Accessories,49
+Corporate,Monitor,19248,2024-01-01,Central,Accessories,48
+Small Business,Printer,11050,2025-01-31,West,Accessories,25
+Consumer,Laptop,24584,2025-06-08,South,Electronics,28
+Corporate,Mouse,19446,2024-01-25,South,Electronics,14
+Enterprise,Smartwatch,1530,2024-05-23,West,Accessories,15
+Enterprise,Mouse,56668,2024-08-24,West,Accessories,31
+Consumer,Tablet,2054,2024-04-20,North,Office Equipment,13
+Consumer,Mouse,12768,2025-06-19,South,Electronics,48
+Enterprise,Smartphone,24864,2025-03-07,South,Accessories,16
+Small Business,Tablet,45559,2024-07-09,North,Office Equipment,29
+Corporate,Mouse,16230,2024-07-15,West,Electronics,30
+Enterprise,Smartphone,65513,2025-03-25,East,Electronics,49
+Enterprise,Keyboard,14412,2025-05-24,South,Accessories,12
+Small Business,Smartwatch,28009,2024-10-29,East,Office Equipment,37
+Corporate,Monitor,19924,2025-06-25,East,Accessories,17
+Corporate,Headphones,60192,2025-07-20,East,Electronics,44
+Enterprise,Smartwatch,9453,2025-05-18,South,Office Equipment,23
+Corporate,Printer,24338,2025-08-13,North,Office Equipment,43
+Consumer,Mouse,10178,2024-01-11,Central,Office Equipment,7
+Enterprise,Camera,14464,2024-01-06,East,Office Equipment,8
+Enterprise,Keyboard,29960,2024-10-24,West,Accessories,28
+Consumer,Smartphone,16776,2025-01-13,East,Accessories,24
+Corporate,Camera,17020,2025-03-02,West,Office Equipment,23
+Consumer,Laptop,24352,2025-03-25,East,Accessories,16
+Consumer,Keyboard,68839,2025-07-29,Central,Accessories,41
+Corporate,Printer,43563,2025-06-16,East,Accessories,39
+Consumer,Smartwatch,26544,2024-09-27,North,Electronics,16
+Corporate,Keyboard,29876,2024-01-16,Central,Electronics,22
+Consumer,Headphones,45838,2024-01-25,South,Electronics,26
+Small Business,Camera,35964,2025-04-28,North,Accessories,36
+Corporate,Mouse,5640,2025-05-06,East,Electronics,5
+Consumer,Smartphone,62909,2025-01-29,East,Electronics,43
+Consumer,Printer,11661,2024-04-13,West,Office Equipment,13
+Small Business,Tablet,13310,2024-04-17,Central,Office Equipment,10
+Small Business,Camera,35061,2024-09-26,Central,Electronics,29
+Enterprise,Headphones,24738,2025-02-17,West,Office Equipment,42
+Consumer,Monitor,21760,2025-04-05,South,Office Equipment,40
+Consumer,Monitor,16688,2024-11-28,East,Office Equipment,16
+Small Business,Headphones,11766,2025-01-10,West,Accessories,6
+Small Business,Tablet,47978,2025-06-11,South,Office Equipment,46
+Corporate,Monitor,23660,2025-04-28,West,Accessories,14
+Consumer,Printer,49800,2025-07-26,Central,Electronics,30
+Enterprise,Smartphone,21619,2025-07-20,West,Office Equipment,13
+Small Business,Tablet,7176,2025-01-29,South,Office Equipment,39
+Enterprise,Tablet,30168,2024-07-20,East,Accessories,36
+Small Business,Tablet,27552,2025-08-16,West,Accessories,32
+Enterprise,Monitor,25688,2025-05-15,Central,Electronics,38
+Small Business,Smartphone,39173,2024-11-15,East,Electronics,43
+Consumer,Printer,33870,2025-05-21,Central,Accessories,30
+Corporate,Headphones,23310,2025-02-05,East,Accessories,42
+Corporate,Monitor,258,2025-07-08,East,Accessories,2
+Consumer,Printer,26455,2025-01-17,West,Accessories,37
+Enterprise,Headphones,521,2024-06-01,East,Electronics,1
+Small Business,Headphones,41958,2024-07-17,South,Accessories,42
+Enterprise,Camera,994,2024-06-27,West,Electronics,2
+Corporate,Laptop,46452,2024-04-24,East,Accessories,42
+Corporate,Monitor,56220,2024-12-25,East,Electronics,30
+Consumer,Mouse,4482,2024-01-26,South,Office Equipment,27
+Corporate,Keyboard,17268,2024-03-10,Central,Office Equipment,12
+Small Business,Keyboard,24288,2025-03-18,West,Office Equipment,48
+Consumer,Monitor,13419,2024-11-08,North,Electronics,9
+Corporate,Camera,27720,2024-04-13,North,Office Equipment,28
+Enterprise,Laptop,21131,2025-08-20,North,Electronics,17
+Consumer,Monitor,38612,2024-09-16,West,Electronics,28
+Consumer,Mouse,13120,2024-04-23,Central,Accessories,10
+Consumer,Printer,22848,2024-03-26,West,Electronics,17
+Corporate,Smartwatch,24264,2024-02-14,West,Office Equipment,24
+Small Business,Printer,46080,2024-01-29,North,Accessories,48
+Small Business,Monitor,34109,2025-05-10,West,Accessories,23
+Corporate,Camera,10672,2024-08-12,North,Accessories,16
+Consumer,Mouse,24135,2025-01-09,Central,Accessories,15
+Small Business,Printer,40480,2024-08-11,Central,Accessories,22
+Small Business,Mouse,13587,2025-07-02,Central,Accessories,21
+Enterprise,Mouse,60312,2024-05-16,Central,Electronics,42
+Consumer,Printer,18623,2025-01-05,West,Accessories,11
+Small Business,Monitor,41811,2024-04-29,South,Electronics,21
+Enterprise,Smartwatch,22720,2024-01-26,Central,Electronics,16
+Consumer,Printer,9665,2024-08-09,West,Electronics,5
+Enterprise,Smartphone,39888,2024-01-18,Central,Office Equipment,48
+Consumer,Monitor,5175,2025-08-18,North,Accessories,15
+Corporate,Keyboard,9576,2025-04-17,North,Electronics,12
+Small Business,Camera,11850,2024-03-26,Central,Office Equipment,50
+Corporate,Printer,23826,2025-01-14,West,Accessories,33
+Corporate,Keyboard,22983,2024-08-15,South,Accessories,47
+Consumer,Headphones,28776,2025-07-16,Central,Office Equipment,33
+Enterprise,Laptop,13769,2024-03-03,North,Electronics,49
+Corporate,Monitor,52410,2024-11-22,West,Electronics,30
+Corporate,Smartwatch,38010,2024-09-19,North,Accessories,21
+Consumer,Keyboard,40100,2025-06-22,Central,Office Equipment,25
+Consumer,Monitor,8424,2025-07-03,West,Electronics,12
+Enterprise,Headphones,2877,2024-10-28,North,Electronics,21
+Enterprise,Mouse,3960,2024-03-10,North,Electronics,6

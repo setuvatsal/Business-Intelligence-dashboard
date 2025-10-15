@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Intelligence Dashboard</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root{--primary:#1976d2;--success:#2e7d32;--muted:#666}
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: #333; min-height: 100vh; margin:0 }
+        .container { max-width: 1200px; margin: 24px auto; padding: 20px; }
+        .header { background: rgba(255,255,255,0.06); border-radius: 12px; padding: 18px; text-align: center; margin-bottom: 18px; color:#fff }
+        .header h1 { margin:0; font-size:1.6rem }
+        .row{display:flex; gap:16px; align-items:flex-start}
+        .col{flex:1}
+        .card { background:#fff; border-radius:10px; padding:14px; box-shadow:0 6px 18px rgba(0,0,0,0.08); }
+        .controls { display:flex; gap:12px; align-items:center; margin-bottom:12px }
+        .btn{border:0;padding:10px 14px;border-radius:8px;cursor:pointer}
+        .btn-primary{background:var(--primary);color:#fff}
+        .btn-success{background:var(--success);color:#fff}
+        .btn-plain{background:#f0f0f0}
+        input[type=file]{display:none}
+        .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+        .kpi{background:#fafafa;padding:12px;border-radius:8px;text-align:center}
+        .kpi .value{font-weight:700;color:var(--success);font-size:1.3rem}
+        table{width:100%;border-collapse:collapse}
+        th,td{padding:6px 8px;border-bottom:1px solid #eee;text-align:left}
+        .small{font-size:0.9rem;color:var(--muted)}
+        .toast{position:fixed;right:20px;top:20px;background:#222;color:#fff;padding:10px 14px;border-radius:8px;opacity:0;transform:translateY(-8px);transition:all .2s}
+        .toast.show{opacity:1;transform:none}
+        .loading{opacity:0.7}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-chart-line"></i> Business Intelligence Dashboard</h1>
+            <div class="small">Upload CSVs, train the model, run predictions and generate insights</div>
+        </div>
+
+        <div class="row" style="margin-bottom:12px">
+            <div class="col card">
+                <div class="controls">
+                    <label class="btn btn-primary" for="fileInput"><i class="fas fa-file-csv"></i> Choose CSV</label>
+                    <input id="fileInput" type="file" accept=".csv">
+                    <button id="previewBtn" class="btn btn-plain">Preview</button>
+                    <button id="uploadBtn" class="btn btn-success">Upload to DB</button>
+                    <button id="trainBtn" class="btn btn-primary">Train Model</button>
+                    <div id="trainStatus" class="small" style="margin-left:auto"></div>
+                </div>
+                <div id="previewArea" style="max-height:240px;overflow:auto"></div>
+            </div>
+
+            <div class="col card">
+                <h4>Predict Sales</h4>
+                <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px">
+                    <input id="p_product" placeholder="Product">
+                    <input id="p_category" placeholder="Category">
+                    <input id="p_region" placeholder="Region">
+                    <input id="p_segment" placeholder="Customer Segment">
+                    <input id="p_month" placeholder="Month (1-12)" type="number" min="1" max="12" style="width:110px">
+                    <input id="p_quantity" placeholder="Quantity" type="number" min="1" style="width:110px">
+                    <button id="predictBtn" class="btn btn-success">Predict</button>
+                </div>
+                <div id="predictResult" class="small"></div>
+                <hr>
+                <h4>Insights</h4>
+                <div id="insightsArea" class="small">Click Get Insights to analyze DB data.</div>
+                <div style="margin-top:8px"><button id="insightsBtn" class="btn btn-plain">Get Insights</button></div>
+            </div>
+        </div>
+
+        <div class="card" style="margin-bottom:12px">
+            <h4>KPIs & Monthly Sales</h4>
+            <div id="kpiArea" class="kpis" style="margin-bottom:12px"></div>
+            <canvas id="salesChart" style="width:100%;height:260px"></canvas>
+        </div>
+
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+<script>
+function toast(msg, timeout=3000){ const t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'), timeout); }
+
+const fileInput = document.getElementById('fileInput');
+const previewBtn = document.getElementById('previewBtn');
+const uploadBtn = document.getElementById('uploadBtn');
+const trainBtn = document.getElementById('trainBtn');
+const predictBtn = document.getElementById('predictBtn');
+const insightsBtn = document.getElementById('insightsBtn');
+const previewArea = document.getElementById('previewArea');
+const trainStatus = document.getElementById('trainStatus');
+
+let currentFile=null;
+fileInput.addEventListener('change', ()=>{ currentFile = fileInput.files[0]; previewArea.innerHTML = currentFile? `<div class="small">Selected: ${currentFile.name} (${Math.round(currentFile.size/1024)} KB)</div>`:'' });
+
+previewBtn.addEventListener('click', async ()=>{
+    if(!currentFile){ toast('Select a CSV first'); return }
+    previewArea.innerHTML = '<div class="small">Reading preview...</div>';
+    const text = await currentFile.text();
+    const lines = text.split(/\r?\n/).slice(0,11);
+    const rows = lines.map(l=>l.split(','));
+    let html = '<table><thead><tr>'+rows[0].map(h=>`<th>${h}</th>`).join('')+'</tr></thead><tbody>';
+    rows.slice(1).forEach(r=> html += '<tr>'+r.map(c=>`<td>${c}</td>`).join('')+'</tr>');
+    html += '</tbody></table>';
+    previewArea.innerHTML = html;
+});
+
+uploadBtn.addEventListener('click', async ()=>{
+    if(!currentFile){ toast('Select a CSV first'); return }
+    uploadBtn.disabled = true; uploadBtn.textContent='Uploading...';
+    const fd = new FormData(); fd.append('file', currentFile);
+    try{
+        const res = await fetch('/api/upload-data', { method:'POST', body: fd });
+        const j = await res.json();
+        if(j.success){ toast('Uploaded: '+j.filename); refreshDashboard(); }
+        else toast('Upload error: '+(j.error||'unknown'));
+    }catch(e){ toast('Upload failed'); }
+    uploadBtn.disabled=false; uploadBtn.textContent='Upload to DB';
+});
+
+trainBtn.addEventListener('click', async ()=>{
+    trainBtn.disabled=true; trainBtn.textContent='Training...'; trainStatus.textContent='';
+    try{
+        const res = await fetch('/api/train-model', { method:'POST' });
+        const j = await res.json();
+        if(j.success){ trainStatus.textContent = 'MAE: '+j.mae; toast('Model trained'); }
+        else trainStatus.textContent = 'Error: '+(j.error||'');
+    }catch(e){ trainStatus.textContent='Training failed' }
+    trainBtn.disabled=false; trainBtn.textContent='Train Model';
+});
+
+predictBtn.addEventListener('click', async ()=>{
+    const payload = {
+        product: document.getElementById('p_product').value,
+        category: document.getElementById('p_category').value,
+        region: document.getElementById('p_region').value,
+        customer_segment: document.getElementById('p_segment').value,
+        month: parseInt(document.getElementById('p_month').value||1),
+        quantity: parseInt(document.getElementById('p_quantity').value||1)
+    };
+    predictBtn.disabled=true; predictBtn.textContent='Predicting...';
+    try{
+        const res = await fetch('/api/predict', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload)});
+        const j = await res.json();
+        if(j.success) document.getElementById('predictResult').textContent = `Predicted sales: ${j.predicted_sales}`;
+        else document.getElementById('predictResult').textContent = 'Error: '+(j.error||'');
+    }catch(e){ document.getElementById('predictResult').textContent='Request failed'; }
+    predictBtn.disabled=false; predictBtn.textContent='Predict';
+});
+
+insightsBtn.addEventListener('click', async ()=>{
+    insightsBtn.disabled=true; insightsBtn.textContent='Analyzing...';
+    try{
+        const res = await fetch('/api/insights');
+        const j = await res.json();
+        if(j.success){ document.getElementById('insightsArea').innerHTML = '<ul>'+j.insights.map(i=>`<li>${i}</li>`).join('')+'</ul>'; }
+        else document.getElementById('insightsArea').textContent = 'Error: '+(j.error||'');
+    }catch(e){ document.getElementById('insightsArea').textContent='Request failed'; }
+    insightsBtn.disabled=false; insightsBtn.textContent='Get Insights';
+});
+
+let salesChart=null;
+async function refreshDashboard(){
+    try{
+        const res = await fetch('/api/dashboard-data');
+        const j = await res.json();
+        if(j.kpis){
+            const area = document.getElementById('kpiArea'); area.innerHTML='';
+            const kv = [ ['total_revenue','Total revenue'], ['total_quantity','Total quantity'], ['avg_order_value','Avg order value'], ['total_orders','Total orders'] ];
+            kv.forEach(([k,label])=> area.innerHTML += `<div class="kpi"><div class="value">${j.kpis[k]}</div><div class="small">${label}</div></div>`);
+        }
+        if(j.monthly_sales){
+            const labels = j.monthly_sales.map(r=>r.date);
+            const data = j.monthly_sales.map(r=>r.sales_amount);
+            const ctx = document.getElementById('salesChart').getContext('2d');
+            if(salesChart) salesChart.destroy();
+            salesChart = new Chart(ctx,{ type:'line', data:{ labels, datasets:[{ label:'Monthly Sales', data, borderColor:getComputedStyle(document.documentElement).getPropertyValue('--primary')||'#1976d2', backgroundColor:'rgba(25,118,210,0.08)', fill:true }] }, options:{ responsive:true } });
+        }
+    }catch(e){ console.error(e); }
+}
+
+refreshDashboard();
+</script>
+</body>
+</html>
